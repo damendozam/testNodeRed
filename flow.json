@@ -53,7 +53,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "2",
+        "payload": "4",
         "payloadType": "num",
         "x": 190,
         "y": 120,
