@@ -99,12 +99,56 @@
         "wires": []
     },
     {
+        "id": "de5898b4db95868a",
+        "type": "inject",
+        "z": "635abf286b8722b5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "6",
+        "payloadType": "num",
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "fac14b742a73bf19"
+            ]
+        ]
+    },
+    {
+        "id": "fac14b742a73bf19",
+        "type": "link out",
+        "z": "635abf286b8722b5",
+        "name": "l2",
+        "mode": "link",
+        "links": [
+            "63e48f26730cb5af",
+            "aabca38f0833d9dc"
+        ],
+        "x": 375,
+        "y": 220,
+        "wires": []
+    },
+    {
         "id": "aabca38f0833d9dc",
         "type": "link in",
         "z": "da608ad4ee189a84",
         "name": "",
         "links": [
-            "19ebc18b69b7fbca"
+            "19ebc18b69b7fbca",
+            "fac14b742a73bf19"
         ],
         "x": 195,
         "y": 160,
@@ -125,7 +169,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "text",
+        "label": "text11",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -138,12 +182,12 @@
         "type": "ui_gauge",
         "z": "da608ad4ee189a84",
         "name": "",
-        "group": "50b404199709120c",
+        "group": "bedeeea8680677ea",
         "order": 1,
         "width": 0,
         "height": 0,
         "gtype": "gage",
-        "title": "gauge",
+        "title": "gauge11",
         "label": "units",
         "format": "{{value}}",
         "min": 0,
@@ -156,7 +200,7 @@
         "seg1": "",
         "seg2": "",
         "className": "",
-        "x": 350,
+        "x": 360,
         "y": 240,
         "wires": []
     },
@@ -165,11 +209,11 @@
         "type": "ui_chart",
         "z": "da608ad4ee189a84",
         "name": "",
-        "group": "f2baf52946c1ee8a",
+        "group": "bedeeea8680677ea",
         "order": 2,
         "width": 0,
         "height": 0,
-        "label": "chart",
+        "label": "chart11",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -198,8 +242,114 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 370,
+        "x": 380,
         "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "63e48f26730cb5af",
+        "type": "link in",
+        "z": "da608ad4ee189a84",
+        "name": "",
+        "links": [
+            "fac14b742a73bf19"
+        ],
+        "x": 175,
+        "y": 440,
+        "wires": [
+            [
+                "134ce284fd567ef3",
+                "275fb20f582f8860",
+                "71c8cac0255c4d9e"
+            ]
+        ]
+    },
+    {
+        "id": "134ce284fd567ef3",
+        "type": "ui_text",
+        "z": "da608ad4ee189a84",
+        "group": "50b404199709120c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text12",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 330,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "275fb20f582f8860",
+        "type": "ui_gauge",
+        "z": "da608ad4ee189a84",
+        "name": "",
+        "group": "bedeeea8680677ea",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge12",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 340,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "71c8cac0255c4d9e",
+        "type": "ui_chart",
+        "z": "da608ad4ee189a84",
+        "name": "",
+        "group": "bedeeea8680677ea",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "chart12",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 360,
+        "y": 600,
         "wires": [
             []
         ]
