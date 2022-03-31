@@ -232,7 +232,8 @@
             [
                 "da025fdc9e1d4a47",
                 "c671f238d22bed3e",
-                "9cd535e19c7e32cf"
+                "9cd535e19c7e32cf",
+                "48961bda2301a8c1"
             ]
         ]
     },
@@ -537,5 +538,22 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "48961bda2301a8c1",
+        "type": "ui_text",
+        "z": "da608ad4ee189a84",
+        "group": "bedeeea8680677ea",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text122",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 360,
+        "y": 100,
+        "wires": []
     }
 ]
