@@ -117,7 +117,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "6",
+        "payload": "3",
         "payloadType": "num",
         "x": 190,
         "y": 220,
